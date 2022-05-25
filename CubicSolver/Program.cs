@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace CubicSolver
 {
@@ -69,13 +69,14 @@ namespace CubicSolver
             x2 = "" + (w + Math.Cbrt(q / 2.0));
             Console.WriteLine($"The roots of the equation are: x1 = {x1}, x2 = {x2}, x3 = {x2}.");
         }
+
         public void NegativeDelta()
         {
             double pi = Math.PI;
             phi = Math.Acos(3 * q / (2 * p * Math.Sqrt(-p / 3.0)));
-            x1 = "" + Math.Round(w + (2 * Math.Sqrt(p / 3.0) * Math.Cos(phi / 3)), 5);
-            x2 = "" + Math.Round(w + (2 * Math.Sqrt(p / 3.0) * Math.Cos(phi / 3 * (2 / 3 * pi))), 5);
-            x3 = "" + Math.Round(w + (2 * Math.Sqrt(p / 3.0) * Math.Cos(phi / 3 * (4 / 3 * pi))), 5);
+            x1 = "" + Math.Round(w + (2 * Math.Sqrt(-p / 3.0) * Math.Cos(phi / 3)), 5);
+            x2 = "" + Math.Round(w + (2 * Math.Sqrt(-p / 3.0) * Math.Cos(phi / 3 * (2 / 3 * pi))), 5);
+            x3 = "" + Math.Round(w + (2 * Math.Sqrt(-p / 3.0) * Math.Cos(phi / 3 * (4 / 3 * pi))), 5);
             Console.WriteLine($"The roots of the equation are: x1 = {x1}, x2 = {x2}, x3 = {x3}.");
         }
     }
